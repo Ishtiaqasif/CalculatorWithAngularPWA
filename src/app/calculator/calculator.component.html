@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col">
+            <div class="main">
+                <div id="display">
+                    <input class="monitor form-control" [style.color]="monitorTextColor" readonly [value]="monitor">
+                </div>
+                <div class="buttons">
+                    <table class="table">
+                        <tr>
+                            <td class="button" (click)="removeAllDigits()" style="color: orangered;">AC</td>
+                            <td class="button" (click)="removeADigit()">C</td>
+                            <td class="button" (click)="addDigit('%')">%</td>
+                            <td class="button" (click)="addDigit('/')">/</td>
+                        </tr>
+                        <tr>
+                            <td class="button" (click)="addDigit(1)">1</td>
+                            <td class="button" (click)="addDigit(2)">2</td>
+                            <td class="button" (click)="addDigit(3)">3</td>
+                            <td class="button" (click)="addDigit('*')">*</td>
+                        </tr>
+                        <tr>
+                            <td class="button" (click)="addDigit(4)">4</td>
+                            <td class="button" (click)="addDigit(5)">5</td>
+                            <td class="button" (click)="addDigit(6)">6</td>
+                            <td class="button" (click)="addDigit('-')">-</td>
+                        </tr>
+                        <tr>
+                            <td class="button" (click)="addDigit(7)">7</td>
+                            <td class="button" (click)="addDigit(8)">8</td>
+                            <td class="button" (click)="addDigit(9)">9</td>
+                            <td class="button" (click)="addDigit('+')">+</td>
+                        </tr>
+                        <tr>
+                            <td class="button" (click)="addDigit('.')">.</td>
+                            <td class="button" (click)="addDigit('0')">0</td>
+                            <td colspan="2" class="button" (click)="evaluateExp()"
+                                style="color:greenyellow; font-weight: bold;">=</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

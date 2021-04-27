@@ -1,0 +1,64 @@
+body{
+    overflow: hidden;
+    margin: 0px;
+    line-height:3.25;
+}
+.main{
+    
+    padding: 1em;
+    background-color: #1E1E1E;
+    text-align: center;
+    
+    
+}
+.container-fluid{
+    margin: 0px;
+    padding: 0px;
+}
+.monitor{
+    pointer-events: none;
+    background-color: #333333;
+    height: 5em;
+    border: none;
+    color: white;
+    font-size: x-large;
+    text-align: right;
+    transition-duration: .5s;
+}
+.col{
+    margin: 0px;
+    padding: 0px;
+}
+.buttons{
+    margin-top: 2em;
+}
+.button {
+    border: solid .1em #1E1E1E;
+    
+ background-color: #333333;
+ font-size: 1.5em;
+ color: white;
+ position: relative;
+ transition-duration: .4s;
+ overflow: hidden;
+ cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: yellow;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.5s
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
